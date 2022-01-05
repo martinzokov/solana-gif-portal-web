@@ -105,6 +105,10 @@ const App = () => {
       console.log('No Gif link');
       return
     }
+    if (!inputValue.match(/(https?:\/\/(.+?\.)?giphy\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/)){
+      console.log("Only GIFs from Giphy are supported");
+      return
+    }
     setInputValue('');
     console.log('Gif link ', inputValue);
     
